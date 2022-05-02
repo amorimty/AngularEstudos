@@ -1,0 +1,61 @@
+<h4 class="text-center">Produto</h4>
+<!-- #loginForm="ngForm" é uma variável que obtem o estado do formulário inteiro e pode ser utilizada para verificações -->
+<form action="" class="form mt-4" (ngSubmit)="getProduct()" #loginForm="ngForm">
+  <div class="form-group">
+    <input
+      class="form-control"
+      placeholder="ID do produto"
+      [(ngModel)]="idProduct"
+      name="id"
+      #campoID="ngModel"
+      required
+    />
+    <app-mensagem
+      *ngIf="campoID.invalid && campoID.touched"
+      mensagem="ID do produto obrigatório"
+    ></app-mensagem>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary btn-block"
+    [disabled]="loginForm.invalid"
+  >
+    Buscar
+  </button>
+
+  <table class="tabela">
+    <thead class="tabela __cabecalho">
+      <th class="tabela __cabecalho __conteudo">id</th>
+      <th class="tabela __cabecalho __conteudo">nome</th>
+      <th class="tabela __cabecalho __conteudo">descrição</th>
+      <th class="tabela __cabecalho __conteudo">preço</th>
+      <th class="tabela __cabecalho __conteudo">quantidade</th>
+      <th class="tabela __cabecalho __conteudo">idCategoria</th>
+    </thead>
+    <tbody>
+      <tr class="tabela __linha">
+        <td class="tabela __conteudo">
+          {{ product.IdProduct }}
+        </td>
+        <td class="tabela __conteudo">
+          {{ product.name }}
+        </td>
+        <td class="tabela __conteudo">
+          {{ product.description }}
+        </td>
+        <td class="tabela __conteudo">
+          {{ product.price | currency }}
+        </td>
+        <td class="tabela __conteudo">
+          {{ product.quantity }}
+        </td>
+        <td class="tabela __conteudo">
+          {{ product.idCategory }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+<p>Não é um usuário?<a [routerLink]="['novo-usuario']">Se cadastre.</a></p>

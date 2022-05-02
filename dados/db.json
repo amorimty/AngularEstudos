@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "active": true,
+      "id": "1",
+      "name": "teste",
+      "description": "teste-123",
+      "price": 123,
+      "quantity": 432,
+      "idCategory": 1
+    },
+    {
+      "active": true,
+      "id": "3",
+      "name": "teste1",
+      "description": "apapapap",
+      "price": "799",
+      "quantity": "388",
+      "idCategory": "2"
+    },
+    {
+      "active": true,
+      "id": "4",
+      "name": "12312",
+      "description": "asdasd",
+      "price": "1231",
+      "quantity": "3234",
+      "idCategory": "5"
+    },
+    {
+      "active": true,
+      "id": "5",
+      "name": "asdasdas",
+      "description": "asdasdasda",
+      "price": "13234",
+      "quantity": "3245",
+      "idCategory": "5"
+    },
+    {
+      "active": true,
+      "id": "45",
+      "name": "sdfsdfsdf",
+      "description": "asdasdasd",
+      "price": "3423",
+      "quantity": "5345345",
+      "idCategory": "69"
+    }
+  ]
+}
